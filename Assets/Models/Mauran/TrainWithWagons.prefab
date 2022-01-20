@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8684570448597014079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8684570448597014078}
+  m_Layer: 0
+  m_Name: TrainWithWagons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8684570448597014078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8684570448597014079}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5.82, y: -6.43, z: 72.47485}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5432459889851856543}
+  - {fileID: 5575040296521653840}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1001 &8684570448895650253
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8684570448597014078}
+    m_Modifications:
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084170159996700136, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_Name
+      value: train karting
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+--- !u!4 &5432459889851856543 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+  m_PrefabInstance: {fileID: 8684570448895650253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9131248557955973378
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8684570448597014078}
+    m_Modifications:
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084170159996700136, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_Name
+      value: train karting (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+--- !u!4 &5575040296521653840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+  m_PrefabInstance: {fileID: 9131248557955973378}
+  m_PrefabAsset: {fileID: 0}
