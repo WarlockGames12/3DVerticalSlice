@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4084170159996700136}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.21, y: -6, z: 42.6}
+  m_LocalPosition: {x: -11.623804, y: -10.711454, z: 92.54889}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7419438323818073620}
@@ -62,7 +62,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedTrain: 15
-  Game: 0
 --- !u!82 &-2147798070818173628
 AudioSource:
   m_ObjectHideFlags: 0

@@ -7,13 +7,6 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     [Header("Movement of the Train")]
     public float SpeedTrain = 30f;
-    public bool Game = false; 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Game = false;
-    }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +20,6 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
             //this will destroy the train behind the player
             Destroy(gameObject);
-            Game = true;
         }
     }
 }

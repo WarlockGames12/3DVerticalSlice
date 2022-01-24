@@ -14,7 +14,6 @@ public class SpawningTrain : MonoBehaviour
 
     [Header("Floats")]
     [SerializeField] private float LifeTime = 5f;
-    private int Transforms = 0;
 
     [Header("Floats in coroutines")]
     private IEnumerator coroutine;
@@ -28,8 +27,6 @@ public class SpawningTrain : MonoBehaviour
         TrainsSpawn();
     }
 
-   
-
     public void TrainsSpawn()
     {
         //Make gameobject, transform and a quaternion, so you can use it for a random spawner
@@ -42,33 +39,54 @@ public class SpawningTrain : MonoBehaviour
         GameObject DestroyTrain = Instantiate(NewTrains, Pingas.transform.position, spawnRotation) as GameObject;
         TrainNoice.Play();
 
+        //Rotate the train
         if (NewTrains != null && NewTrains.name == "train karting" && RandomTransform[0] == Pingas)
         {
+            RandomTrains[0].transform.position = RandomTransform[0].transform.position;
             DestroyTrain.transform.Rotate(0, 90, 0);
         }
         if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[0] == Pingas)
         {
+            RandomTrains[1].transform.position = RandomTransform[0].transform.position;
             DestroyTrain.transform.Rotate(0, 180, 0);
+        }
+        if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[0] == Pingas)
+        {
+            RandomTrains[2].transform.position = RandomTransform[0].transform.position;
+            DestroyTrain.transform.Rotate(0, 0, 0);
         }
         if (NewTrains != null && NewTrains.name == "train karting" && RandomTransform[1] == Pingas)
         {
+            RandomTrains[0].transform.position = RandomTransform[1].transform.position;
             DestroyTrain.transform.Rotate(0, 90, 0);
         }
         if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[1] == Pingas)
         {
+            RandomTrains[1].transform.position = RandomTransform[1].transform.position;
             DestroyTrain.transform.Rotate(0, 180, 0);
+        }
+        if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[1] == Pingas)
+        {
+            RandomTrains[2].transform.position = RandomTransform[1].transform.position;
+            DestroyTrain.transform.Rotate(0, 0, 0);
         }
         if (NewTrains != null && NewTrains.name == "train karting" && RandomTransform[2] == Pingas)
         {
+            RandomTrains[0].transform.position = RandomTransform[2].transform.position;
             DestroyTrain.transform.Rotate(0, 90, 0);
         }
         if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[2] == Pingas)
         {
+            RandomTrains[1].transform.position = RandomTransform[2].transform.position;
             DestroyTrain.transform.Rotate(0, 180, 0);
         }
+        if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[2] == Pingas)
+        {
+            RandomTrains[2].transform.position = RandomTransform[2].transform.position;
+            DestroyTrain.transform.Rotate(0, 0, 0);
+        }
 
-        
-
+        //Wait for seconds after Train Karting (clone) comes up
         if (DestroyTrain != null && DestroyTrain.name == "train karting(Clone)")
         {
             if (RandomTransform[0] == Pingas && RandomTrains[0] == NewTrains)
@@ -87,7 +105,9 @@ public class SpawningTrain : MonoBehaviour
             {
                 StartCoroutine(RandomTrains1());
             }
-        } 
+        }
+
+        //Wait for seconds after TrainWithWagons (clone) comes up
         if (DestroyTrain != null && DestroyTrain.name == "TrainWithWagons(Clone)")
         {
             if (RandomTransform[0] == Pingas && RandomTrains[1] == NewTrains)
@@ -107,6 +127,26 @@ public class SpawningTrain : MonoBehaviour
                 StartCoroutine(RandomTrains1());
             }
         }
+
+        if (DestroyTrain != null && DestroyTrain.name == "Trains(Clone)")
+        {
+            if (RandomTransform[0] == Pingas && RandomTrains[2] == NewTrains)
+            {
+                StartCoroutine(RandomTrains1());
+            }
+            if (RandomTransform[1] == Pingas && RandomTrains[2] == NewTrains)
+            {
+                StartCoroutine(RandomTrains1());
+            }
+            if (RandomTransform[2] == Pingas && RandomTrains[2] == NewTrains)
+            {
+                StartCoroutine(RandomTrains1());
+            }
+            if (RandomTransform[3] == Pingas && RandomTrains[2] == NewTrains)
+            {
+                StartCoroutine(RandomTrains1());
+            }
+        }
     }
 
     public IEnumerator RandomTrains1()
@@ -117,7 +157,4 @@ public class SpawningTrain : MonoBehaviour
             Start();
         }
     }
-
-   
-
 }
