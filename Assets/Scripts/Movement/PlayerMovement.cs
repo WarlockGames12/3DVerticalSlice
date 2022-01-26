@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Front")
         {
+            AvoidedTrainsScore.avoidedTrainsValue = 0;
             SceneManager.LoadScene("SampleScene");
         }
     }
