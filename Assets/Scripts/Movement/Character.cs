@@ -131,7 +131,13 @@ public class Character : MonoBehaviour
             Debug.Log(collision.gameObject.name);
             Debug.Log("ga dood");
             AvoidedTrainsScore.avoidedTrainsValue = 0;
+            AvoidedTrainsScore.coinValue = 0;
             SceneManager.LoadScene("SampleScene");
         }
+        if (collision.gameObject.tag == "Coin")
+        {
+            Destroy(collision.gameObject);
+            AvoidedTrainsScore.coinValue += 1;
+        } 
     }
 }

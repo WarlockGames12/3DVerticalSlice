@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8684570448597014079}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.29000092, y: -9.066455, z: 200.41888}
+  m_LocalPosition: {x: -11.98, y: -9.066454, z: 200.41888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5432459889851856543}
@@ -39,6 +39,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8684570448597014078}
     m_Modifications:
+    - target: {fileID: -2147798070818173628, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: Priority
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: -2147798070818173628, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: m_Volume
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: -2147798070818173628, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -101,6 +113,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8684570448597014078}
     m_Modifications:
+    - target: {fileID: -2147798070818173628, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
+      propertyPath: Priority
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 3739733387664613202, guid: ebe6c23b3e28d8f449bdd1e661ed8489, type: 3}
       propertyPath: m_RootOrder
       value: 1

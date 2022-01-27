@@ -7,6 +7,7 @@ TagManager:
   - Front
   - Back
   - UnSpawn
+  - Coin
   layers:
   - Default
   - TransparentFX
