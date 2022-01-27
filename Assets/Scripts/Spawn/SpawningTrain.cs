@@ -151,7 +151,12 @@ public class SpawningTrain : MonoBehaviour
 
     public IEnumerator RandomTrains1()
     {
+<<<<<<< HEAD
         yield return new WaitForSeconds(3f);
         TrainsSpawn();
+=======
+            yield return new WaitForSeconds(3f);
+            TrainsSpawn();
+>>>>>>> faa4bc631eaaa2e499eb88074df7f28c0c284b38
     }
 }
