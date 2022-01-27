@@ -16849,6 +16849,7 @@ MonoBehaviour:
   - {fileID: 1058657251}
   - {fileID: 1677877574}
   - {fileID: 2028537399}
+  - {fileID: 2028537399}
   TrainNoice: {fileID: 1080623451}
   LifeTime: 5
 --- !u!4 &985639769
@@ -19166,7 +19167,7 @@ MonoBehaviour:
   SwipeRight: 0
   SwipeUp: 0
   SwipeDown: 0
-  XValue: 11.5
+  XValue: -11.5
   SpeedDodge: 10
   JumpPower: 15
   InJump: 0

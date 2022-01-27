@@ -9,6 +9,7 @@ public class SpawningTrain : MonoBehaviour
     public GameObject[] RandomTrains;
     public Transform[] RandomTransform;
 
+
     [Header("Train Noises")]
     public AudioSource TrainNoice;
 
@@ -29,7 +30,6 @@ public class SpawningTrain : MonoBehaviour
 
     public void TrainsSpawn()
     {
-        //Make gameobject, transform and a quaternion, so you can use it for a random spawner
         GameObject NewTrains = RandomTrains[Random.Range(0, RandomTrains.Length)];
         Transform Pingas = RandomTransform[Random.Range(0, RandomTransform.Length)];
         Quaternion spawnRotation = Quaternion.identity;
