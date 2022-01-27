@@ -151,10 +151,7 @@ public class SpawningTrain : MonoBehaviour
 
     public IEnumerator RandomTrains1()
     {
-        while (true)
-        {
             yield return new WaitForSeconds(3f);
-            Start();
-        }
+            TrainsSpawn();
     }
 }
