@@ -12,6 +12,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Update()
     {
         transform.position += transform.right * SpeedTrain * Time.deltaTime ;
+        transform.position = new Vector3(transform.position.x, -11, transform.position.z);
     }
 
     public void OnCollisionEnter(Collision collision)

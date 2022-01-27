@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
         ColHeight = m_char.height;
         ColCenterY = m_char.center.y;
         m_Animator = GetComponent<Animator>();
-        transform.position = new Vector3(-0.1400003f, -11.03f, 17.3f);
+        transform.position = new Vector3(-0.1400003f, -1.69f, 0f);
     }
 
 
@@ -71,7 +71,7 @@ public class Character : MonoBehaviour
                     m_Animator.Play("dodgeRight");
                 }
             }
-        Vector3 moveVector = new Vector3(x - transform.position.x, y * Time.deltaTime, FwdSpeed * Time.deltaTime);
+        Vector3 moveVector = new Vector3(x - transform.position.x, -1.69f, FwdSpeed * Time.deltaTime);
         x = Mathf.Lerp(x, NewXPos, Time.deltaTime * SpeedDodge);
         m_char.Move(moveVector);
         Jump();
@@ -107,7 +107,7 @@ public class Character : MonoBehaviour
         if (RollCounter <= 0f)
         {
             RollCounter = 0f;
-            m_char.center = new Vector3(-0.1400003f, ColCenterY, 17.3f);
+            m_char.center = new Vector3(-0.1400003f, ColCenterY, 0f);
             m_char.height = ColHeight;
             InRoll = false;
         }
@@ -115,7 +115,7 @@ public class Character : MonoBehaviour
         {
             RollCounter = 0.2f;
             y -= 10f;
-            m_char.center = new Vector3(-0.1400003f, ColCenterY / 2f, 17.3f);
+            m_char.center = new Vector3(-0.1400003f, ColCenterY / 2f, 0f);
             m_char.height = ColHeight / 2f;
             m_Animator.CrossFadeInFixedTime("roll", 0.1f);
             InRoll = true;
@@ -125,8 +125,11 @@ public class Character : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Front")
         {
+            Debug.Log(collision.gameObject.name);
+            Debug.Log("ga dood");
             AvoidedTrainsScore.avoidedTrainsValue = 0;
             SceneManager.LoadScene("SampleScene");
         }
