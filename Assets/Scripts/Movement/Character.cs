@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public enum SIDE { Left, Mid, Right }
@@ -119,6 +120,15 @@ public class Character : MonoBehaviour
             m_Animator.CrossFadeInFixedTime("roll", 0.1f);
             InRoll = true;
             InJump = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Front")
+        {
+            AvoidedTrainsScore.avoidedTrainsValue = 0;
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
