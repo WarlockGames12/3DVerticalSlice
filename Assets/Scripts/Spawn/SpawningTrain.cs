@@ -24,7 +24,6 @@ public class SpawningTrain : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        coroutine = RandomTrains1();
         TrainsSpawn();
     }
 
@@ -45,42 +44,42 @@ public class SpawningTrain : MonoBehaviour
             RandomTrains[0].transform.position = RandomTransform[0].transform.position;
             DestroyTrain.transform.Rotate(0, 90, 0);
         }
-        if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[0] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[0] == Pingas)
         {
             RandomTrains[1].transform.position = RandomTransform[0].transform.position;
             DestroyTrain.transform.Rotate(0, 180, 0);
         }
-        if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[0] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[0] == Pingas)
         {
             RandomTrains[2].transform.position = RandomTransform[0].transform.position;
             DestroyTrain.transform.Rotate(0, 0, 0);
         }
-        if (NewTrains != null && NewTrains.name == "train karting" && RandomTransform[1] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "train karting" && RandomTransform[1] == Pingas)
         {
             RandomTrains[0].transform.position = RandomTransform[1].transform.position;
             DestroyTrain.transform.Rotate(0, 90, 0);
         }
-        if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[1] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[1] == Pingas)
         {
             RandomTrains[1].transform.position = RandomTransform[1].transform.position;
             DestroyTrain.transform.Rotate(0, 180, 0);
         }
-        if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[1] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[1] == Pingas)
         {
             RandomTrains[2].transform.position = RandomTransform[1].transform.position;
             DestroyTrain.transform.Rotate(0, 0, 0);
         }
-        if (NewTrains != null && NewTrains.name == "train karting" && RandomTransform[2] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "train karting" && RandomTransform[2] == Pingas)
         {
             RandomTrains[0].transform.position = RandomTransform[2].transform.position;
             DestroyTrain.transform.Rotate(0, 90, 0);
         }
-        if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[2] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "TrainWithWagons" && RandomTransform[2] == Pingas)
         {
             RandomTrains[1].transform.position = RandomTransform[2].transform.position;
             DestroyTrain.transform.Rotate(0, 180, 0);
         }
-        if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[2] == Pingas)
+        else if (NewTrains != null && NewTrains.name == "Trains" && RandomTransform[2] == Pingas)
         {
             RandomTrains[2].transform.position = RandomTransform[2].transform.position;
             DestroyTrain.transform.Rotate(0, 0, 0);
@@ -93,56 +92,56 @@ public class SpawningTrain : MonoBehaviour
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[1] == Pingas && RandomTrains[0] == NewTrains)
+            else if (RandomTransform[1] == Pingas && RandomTrains[0] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[2] == Pingas && RandomTrains[0] == NewTrains)
+            else if (RandomTransform[2] == Pingas && RandomTrains[0] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[3] == Pingas && RandomTrains[0] == NewTrains)
+            else if (RandomTransform[3] == Pingas && RandomTrains[0] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
         }
 
         //Wait for seconds after TrainWithWagons (clone) comes up
-        if (DestroyTrain != null && DestroyTrain.name == "TrainWithWagons(Clone)")
+        else if (DestroyTrain != null && DestroyTrain.name == "TrainWithWagons(Clone)")
         {
             if (RandomTransform[0] == Pingas && RandomTrains[1] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[1] == Pingas && RandomTrains[1] == NewTrains)
+            else if (RandomTransform[1] == Pingas && RandomTrains[1] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[2] == Pingas && RandomTrains[1] == NewTrains)
+            else if (RandomTransform[2] == Pingas && RandomTrains[1] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[3] == Pingas && RandomTrains[1] == NewTrains)
+            else if (RandomTransform[3] == Pingas && RandomTrains[1] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
         }
 
-        if (DestroyTrain != null && DestroyTrain.name == "Trains(Clone)")
+        else if (DestroyTrain != null && DestroyTrain.name == "Trains(Clone)")
         {
             if (RandomTransform[0] == Pingas && RandomTrains[2] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[1] == Pingas && RandomTrains[2] == NewTrains)
+            else if (RandomTransform[1] == Pingas && RandomTrains[2] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[2] == Pingas && RandomTrains[2] == NewTrains)
+            else if (RandomTransform[2] == Pingas && RandomTrains[2] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
-            if (RandomTransform[3] == Pingas && RandomTrains[2] == NewTrains)
+            else if (RandomTransform[3] == Pingas && RandomTrains[2] == NewTrains)
             {
                 StartCoroutine(RandomTrains1());
             }
