@@ -55,6 +55,7 @@ public class Character : MonoBehaviour
                 {
                     Dodge.Play();
                     NewXPos = XValue;
+                    
                     m_side = SIDE.Left;
                     m_Animator.Play("dodgeLeft");
                     
@@ -63,6 +64,7 @@ public class Character : MonoBehaviour
                 {
                     Dodge1.Play();
                     NewXPos = -0.1400003f;
+                    
                     m_side = SIDE.Mid;
                     m_Animator.Play("dodgeLeft");
                 }
@@ -74,6 +76,7 @@ public class Character : MonoBehaviour
                 {
                     Dodge.Play();
                     NewXPos = 12.5f;
+                    
                     m_side = SIDE.Right;
                     m_Animator.Play("dodgeRight");
                 }
@@ -81,6 +84,7 @@ public class Character : MonoBehaviour
                 {
                     Dodge1.Play();
                     NewXPos = -0.1400003f;
+                    
                     m_side = SIDE.Mid;
                     m_Animator.Play("dodgeRight");
                 }
@@ -155,5 +159,9 @@ public class Character : MonoBehaviour
         {
             Destroy(collision.gameObject);
         } 
+        if (collision.gameObject.tag == "Ending")
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }
