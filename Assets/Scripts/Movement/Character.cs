@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public enum SIDE { Left, Mid, Right }
 public class Character : MonoBehaviour
 {
+    [Header("Player Controls")]
     public SIDE m_side = SIDE.Mid;
     float NewXPos = -0.1400003f;
     [HideInInspector]
@@ -23,6 +24,14 @@ public class Character : MonoBehaviour
     public float FwdSpeed = 7f;
     private float ColHeight;
     private float ColCenterY;
+
+    [Header("Player Sound Effects")]
+    public AudioSource Dodge;
+    public AudioSource Dodge1;
+    public AudioSource Rolling;
+    public AudioSource Jumping;
+    public AudioSource Landing;
+
     void Start()
     {
         m_char = GetComponent<CharacterController>();
@@ -44,12 +53,15 @@ public class Character : MonoBehaviour
             {
                 if (m_side == SIDE.Mid)
                 {
+                    Dodge.Play();
                     NewXPos = XValue;
                     m_side = SIDE.Left;
                     m_Animator.Play("dodgeLeft");
+                    
                 }
                 else if (m_side == SIDE.Right)
                 {
+                    Dodge1.Play();
                     NewXPos = -0.1400003f;
                     m_side = SIDE.Mid;
                     m_Animator.Play("dodgeLeft");
@@ -60,12 +72,14 @@ public class Character : MonoBehaviour
             {
                 if (m_side == SIDE.Mid)
                 {
+                    Dodge.Play();
                     NewXPos = 12.5f;
                     m_side = SIDE.Right;
                     m_Animator.Play("dodgeRight");
                 }
                 else if (m_side == SIDE.Left)
                 {
+                    Dodge1.Play();
                     NewXPos = -0.1400003f;
                     m_side = SIDE.Mid;
                     m_Animator.Play("dodgeRight");
@@ -83,11 +97,13 @@ public class Character : MonoBehaviour
         {
             if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Falling"))
             {
+                Landing.Play();
                 m_Animator.Play("Landing");
                 InJump = false;
             }
             if (SwipeUp)
             {
+                Jumping.Play();
                 y = JumpPower;
                 m_Animator.CrossFadeInFixedTime("Jump", 0.1f);
                 InJump = true;
@@ -113,6 +129,7 @@ public class Character : MonoBehaviour
         }
         if (SwipeDown)
         {
+            Rolling.Play();
             RollCounter = 0.2f;
             y -= 10f;
             m_char.center = new Vector3(-0.1400003f, ColCenterY / 2f, 0f);
@@ -137,7 +154,6 @@ public class Character : MonoBehaviour
         if (collision.gameObject.tag == "Coin")
         {
             Destroy(collision.gameObject);
-            AvoidedTrainsScore.coinValue += 1;
         } 
     }
 }
